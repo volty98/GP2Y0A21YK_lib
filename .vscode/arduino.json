@@ -1,0 +1,13 @@
+{
+    "buildPreferences": [
+        [
+            "compiler.c.extra_flags",
+            "-Wall -Isrc"
+        ],
+        [
+            "compiler.cpp.extra_flags",
+            "-Wall -Isrc"
+        ]
+    ],
+    "board": "arduino:megaavr:nona4809"
+}
