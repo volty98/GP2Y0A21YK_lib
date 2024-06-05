@@ -1,0 +1,18 @@
+{
+    "buildPreferences": [
+        [
+            "compiler.c.extra_flags",
+            "-Wall -Isrc"
+        ],
+        [
+            "compiler.cpp.extra_flags",
+            "-Wall -Isrc"
+        ]
+    ],
+    "prebuild": "xcopy /Y /E /I %CD%\\src %CD%\\examples\\BasicUsage\\src",
+    "postbuild": "rmdir /S /Q %CD%\\examples\\BasicUsage\\src",
+    "output": ".build",
+    "board": "arduino:megaavr:nona4809",
+    "sketch": "examples\\BasicUsage\\BasicUsage.ino",
+    "port": "COM7"
+}
