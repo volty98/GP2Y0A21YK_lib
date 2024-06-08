@@ -9,5 +9,9 @@
             "-Wall -Isrc"
         ]
     ],
-    "board": "arduino:megaavr:nona4809"
+    "prebuild": "xcopy /Y /E /I %CD%\\src %CD%\\examples\\BasicUsage\\src",
+    "postbuild": "rmdir /S /Q %CD%\\examples\\BasicUsage\\src",
+    "output": ".build",
+    "board": "arduino:renesas_uno:minima",
+    "sketch": "examples\\BasicUsage\\BasicUsage.ino"
 }
